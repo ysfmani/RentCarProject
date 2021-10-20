@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600" prefWidth="900" style="-fx-background-color: #DCDCDC;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ListerAssurance">
+    <children>
+        <Label layoutX="192.0" layoutY="19.0" prefHeight="58.0" prefWidth="389.0" text="Liste des Assurances" textFill="#404040">
+            <font>
+                <Font name="System Bold" size="40.0" />
+            </font>
+        </Label>
+        <Pane layoutY="4.0" prefHeight="600.0" prefWidth="184.0" style="-fx-background-color: #C2C9D3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="716.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <TextField fx:id="NomAssurance" layoutX="10.0" layoutY="61.0" prefHeight="20.0" prefWidth="150.0" promptText="Nom" />
+                <TextField fx:id="id_assurance" layoutX="10.0" layoutY="24.0" prefHeight="20.0" prefWidth="150.0" promptText="Id" />
+                <TextField fx:id="DateD" layoutX="10.0" layoutY="102.0" prefHeight="20.0" prefWidth="150.0" promptText="Date debut" />
+                <ComboBox fx:id="Type" layoutX="10.0" layoutY="188.0" prefHeight="25.0" prefWidth="150.0" promptText="Type assurance">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Simple" />
+                            <String fx:value="Tous risque" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Button fx:id="ajouter" layoutX="25.0" layoutY="419.0" mnemonicParsing="false" onAction="#ajouterAssurance" prefHeight="39.0" prefWidth="120.0" style="-fx-background-color: #404040;" stylesheets="@../CSS/ButtonHome2.css" text="Ajouter" textFill="WHITE">
+                    <font>
+                        <Font name="Book Antiqua" size="19.0" />
+                    </font>
+                </Button>
+                <Button fx:id="supprimer" layoutX="25.0" layoutY="493.0" mnemonicParsing="false" onAction="#suprassurance" prefHeight="39.0" prefWidth="120.0" style="-fx-background-color: #404040;" stylesheets="@../CSS/ButtonHome2.css" text="Supprimer" textFill="WHITE">
+                    <font>
+                        <Font name="Book Antiqua" size="19.0" />
+                    </font>
+                </Button>
+            <TextField fx:id="DateF" layoutX="11.0" layoutY="142.0" promptText="Date Fin" />
+            </children>
+        </Pane>
+        <TableView fx:id="tableassurance" layoutX="300.0" layoutY="83.0" prefHeight="380.0" prefWidth="460.0" stylesheets="@../CSS/TablePat.css">
+            <columns>
+                <TableColumn fx:id="col_id" prefWidth="33.0" text="Id" />
+                <TableColumn fx:id="col_nom" prefWidth="90.4000244140625" text="Nom" />
+                <TableColumn fx:id="col_type" prefWidth="80.79998779296875" text="Type" />
+                <TableColumn fx:id="col_DateD" prefWidth="123.19998168945312" text="Date debut" />
+            <TableColumn fx:id="col_DateF" prefWidth="132.0" text="Date Fin" />
+            </columns>
+        </TableView>
+        <Button fx:id="ret" layoutX="750.0" layoutY="13.0" mnemonicParsing="false" onAction="#interAdm">
+            <graphic>
+                <ImageView fitHeight="39.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../png/replay-arrow.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="homeBtn" layoutX="823.0" layoutY="14.0" mnemonicParsing="false" onAction="#homee">
+            <graphic>
+
+                <ImageView fx:id="homeImg" fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../png/home-button.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+    </children>
+</AnchorPane>

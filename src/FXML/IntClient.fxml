@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #DCDCDC;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.IntClient">
+    <children>
+        <Label layoutX="212.0" layoutY="25.0" prefHeight="90.0" prefWidth="492.0" text="Bonjour chez M&amp;M location ">
+            <font>
+                <Font name="System Bold" size="36.0" />
+            </font>
+        </Label>
+        <Pane prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #C2C9D3;" AnchorPane.rightAnchor="716.0">
+         <children>
+                <Button fx:id="louer" layoutX="25.0" layoutY="266.0" mnemonicParsing="false" onAction="#affLouer" prefHeight="80.0" prefWidth="150.0" styleClass="..\CSS\ButtonHome2.css" stylesheets="@../CSS/ButtonHome1.css" text="louer" textFill="WHITE" />
+         </children>
+        </Pane>
+      <Button fx:id="homeBtn" layoutX="805.0" layoutY="34.0" mnemonicParsing="false" onAction="#homee">
+         <graphic>
+              <ImageView fitHeight="64.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@../png/home-button.png" />
+                  </image>
+              </ImageView>
+         </graphic></Button>
+      <ImageView fitHeight="331.0" fitWidth="403.0" layoutX="313.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/11111.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

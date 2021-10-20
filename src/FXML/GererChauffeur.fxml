@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600" prefWidth="900" style="-fx-background-color: #DCDCDC;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="">
+    <children>
+        <Label layoutX="192.0" layoutY="19.0" prefHeight="58.0" prefWidth="389.0" text="Liste des Chaufferus" textFill="#404040">
+            <font>
+                <Font name="System Bold" size="40.0" />
+            </font>
+        </Label>
+        <Pane layoutY="4.0" prefHeight="600.0" prefWidth="184.0" style="-fx-background-color: #C2C9D3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="716.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <TextField fx:id="tel" layoutX="10.0" layoutY="157.0" prefHeight="20.0" prefWidth="150.0" promptText="Disponiblité" />
+                <TextField fx:id="nom" layoutX="10.0" layoutY="61.0" prefHeight="20.0" prefWidth="150.0" promptText="Nom" />
+                <TextField fx:id="prenom" layoutX="10.0" layoutY="112.0" prefHeight="20.0" prefWidth="150.0" promptText="Prenom" />
+                <TextField fx:id="id_client" layoutX="10.0" layoutY="24.0" prefHeight="20.0" prefWidth="150.0" promptText="Id" />
+                <TextField fx:id="cin" layoutX="10.0" layoutY="204.0" prefHeight="20.0" prefWidth="150.0" promptText="Cin/Passport" />
+                <Button fx:id="ajouter" layoutX="25.0" layoutY="419.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="120.0" style="-fx-background-color: #404040;" stylesheets="@../CSS/ButtonHome2.css" text="Ajouter" textFill="WHITE">
+                    <font>
+                        <Font name="Book Antiqua" size="19.0" />
+                    </font>
+                </Button>
+              <Button fx:id="supprimer" layoutX="25.0" layoutY="493.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="120.0" style="-fx-background-color: #404040;" stylesheets="@../CSS/ButtonHome2.css" text="Supprimer" textFill="WHITE">
+                  <font>
+                      <Font name="Book Antiqua" size="19.0" />
+                  </font>
+              </Button>
+            </children>
+        </Pane>
+        <TableView fx:id="tableclients" layoutX="300.0" layoutY="83.0" prefHeight="380.0" prefWidth="428.0" stylesheets="@../CSS/TablePat.css">
+            <columns>
+                <TableColumn fx:id="col_id" prefWidth="33.0" text="Id" />
+                <TableColumn fx:id="col_nom" prefWidth="66.0" text="Nom" />
+                <TableColumn fx:id="col_prenom" prefWidth="69.0" text="Prénom" />
+                <TableColumn fx:id="col_cin" prefWidth="104.5999755859375" text="CIN/passport" />
+            <TableColumn prefWidth="75.0" text="dispo" />
+            <TableColumn prefWidth="75.0" text="Dispo" />
+            </columns>
+        </TableView>
+        <Button fx:id="ret" layoutX="750.0" layoutY="13.0" mnemonicParsing="false" onAction="#interAdm">
+            <graphic>
+                <ImageView fitHeight="39.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../png/replay-arrow.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="homeBtn" layoutX="823.0" layoutY="14.0" mnemonicParsing="false" onAction="#homee">
+            <graphic>
+
+                <ImageView fx:id="homeImg" fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../png/home-button.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+    </children>
+</AnchorPane>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #DCDCDC;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Louer">
+   <children>
+      <Pane prefHeight="600.0" prefWidth="212.0" style="-fx-background-color: #C2C9D3;">
+         <children>
+            <TextField fx:id="nmbrejours" layoutX="17.0" layoutY="95.0" prefHeight="37.0" prefWidth="179.0" promptText="Nombre de jours" />
+            <ComboBox fx:id="typeasss" layoutX="17.0" layoutY="156.0" prefHeight="25.0" prefWidth="179.0" promptText="Type assurance">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Simple" />
+                     <String fx:value="Tous risque" />
+                  </FXCollections>
+               </items>
+            </ComboBox>
+            <Button layoutX="58.0" layoutY="223.0" mnemonicParsing="false" onAction="#imprimer" prefHeight="38.0" prefWidth="97.0" stylesheets="@../CSS/ButtonHome1.css" text="recu" textFill="WHITE" />
+            <Label layoutX="17.0" layoutY="61.0" prefHeight="25.0" prefWidth="170.0" text="Nombre de jours de location">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+         </children>
+      </Pane>
+
+   <TableView fx:id="tablevoitures" layoutX="255.0" layoutY="124.0" prefHeight="351.0" prefWidth="548.0" stylesheets="@../CSS/TablePat.css">
+      <columns>
+         <TableColumn fx:id="col_Immatriculation" prefWidth="107.4000244140625" text="Immatriculation" />
+         <TableColumn fx:id="Col_Marque" minWidth="0.0" prefWidth="117.0" text="Marque" />
+         <TableColumn fx:id="col_Model" minWidth="0.0" prefWidth="103.0" text="Model" />
+         <TableColumn fx:id="col_Couleur" minWidth="0.0" prefWidth="131.0" text="Couleur" />
+         <TableColumn fx:id="col_prix" prefWidth="85.20001220703125" text="Prix" />
+      </columns>
+   </TableView>
+      <Label layoutX="225.0" layoutY="26.0" prefHeight="58.0" prefWidth="522.0" text="choisissez La voiture a louer">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="homeBtn" layoutX="809.0" layoutY="14.0" mnemonicParsing="false" onAction="#homee" prefHeight="58.0" prefWidth="67.0">
+         <graphic>
+            <ImageView fitHeight="48.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../png/home-button.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+   </children>
+</AnchorPane>

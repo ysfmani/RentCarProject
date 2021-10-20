@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #DCDCDC;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.IntAgentLocation">
+   <children>
+      <Label layoutX="220.0" layoutY="24.0" prefHeight="90.0" prefWidth="590.0" text="Bonjour chez M&amp;M location ">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Pane prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #C2C9D3;" AnchorPane.rightAnchor="716.0">
+         <children>
+            <Button fx:id="client" layoutX="20.0" layoutY="50.0" mnemonicParsing="false" onAction="#affTabClient" prefHeight="80.0" prefWidth="150.0" stylesheets="@../CSS/ButtonHome1.css" text="Consulter Client" textFill="WHITE" />
+            <Button fx:id="voitures" layoutX="20.0" layoutY="250.0" mnemonicParsing="false" onAction="#affTabVoitures" prefHeight="80.0" prefWidth="150.0" styleClass="..\CSS\ButtonHome2.css" stylesheets="@../CSS/ButtonHome1.css" text="Consulter Voitures" textFill="WHITE" />
+            <Button fx:id="ass" layoutX="20.0" layoutY="450.0" mnemonicParsing="false" onAction="#affTabAssurance" prefHeight="80.0" prefWidth="150.0" stylesheets="@../CSS/ButtonHome1.css" text="Assurance" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Button fx:id="homeBtn" layoutX="810.0" layoutY="14.0" mnemonicParsing="false" onAction="#homee">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../png/home-button.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fitHeight="330.0" fitWidth="386.0" layoutX="390.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/11111.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

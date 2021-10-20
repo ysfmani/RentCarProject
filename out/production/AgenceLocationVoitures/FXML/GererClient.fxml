@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600" prefWidth="900" style="-fx-background-color: #00ff00;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ListerClients">
+    <children>
+        <Label layoutX="192.0" layoutY="19.0" prefHeight="58.0" prefWidth="372.0" text="Liste des Clients" textFill="#404040">
+            <font>
+                <Font name="System Bold" size="40.0" />
+            </font>
+        </Label>
+        <Pane layoutY="4.0" prefHeight="600.0" prefWidth="184.0" style="-fx-background-color: #C2C9D3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="716.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <TextField fx:id="tel" layoutX="10.0" layoutY="177.0" prefHeight="20.0" prefWidth="150.0" promptText="Téléphone" />
+                <TextField fx:id="adresse" layoutX="10.0" layoutY="215.0" prefHeight="20.0" prefWidth="150.0" promptText="Adresse" />
+                <TextField fx:id="mdp" layoutX="10.0" layoutY="330.0" prefHeight="20.0" prefWidth="150.0" promptText="Mot de passe" />
+                <TextField fx:id="DateNaissance" layoutX="10.0" layoutY="141.0" prefHeight="20.0" prefWidth="150.0" promptText="Date_naissance" />
+                <TextField fx:id="nom" layoutX="10.0" layoutY="61.0" prefHeight="20.0" prefWidth="150.0" promptText="Nom" />
+                <TextField fx:id="prenom" layoutX="10.0" layoutY="103.0" prefHeight="20.0" prefWidth="150.0" promptText="Prenom" />
+                <TextField fx:id="etatCiv" layoutX="10.0" layoutY="251.0" prefHeight="20.0" prefWidth="150.0" promptText="Etat civil" />
+                <TextField fx:id="id_client" layoutX="10.0" layoutY="24.0" prefHeight="20.0" prefWidth="150.0" promptText="Id" />
+            <TextField fx:id="cin" layoutX="10.0" layoutY="288.0" prefHeight="20.0" prefWidth="150.0" promptText="Cin/Passport" />
+              <Button fx:id="ajouter" layoutX="25.0" layoutY="447.0" mnemonicParsing="false" onAction="#ajouterClient" prefHeight="39.0" prefWidth="120.0" style="-fx-background-color: #404040;" stylesheets="@../CSS/ButtonHome2.css" text="Ajouter" textFill="WHITE">
+                  <font>
+                      <Font name="Book Antiqua" size="19.0" />
+                  </font>
+              </Button>
+              <Button fx:id="supprimer" layoutX="25.0" layoutY="511.0" mnemonicParsing="false" onAction="#suprClient" prefHeight="39.0" prefWidth="120.0" style="-fx-background-color: #404040;" stylesheets="@../CSS/ButtonHome2.css" text="Supprimer" textFill="WHITE">
+                  <font>
+                      <Font name="Book Antiqua" size="19.0" />
+                  </font>
+              </Button>
+            <Button layoutX="25.0" layoutY="375.0" mnemonicParsing="false" onAction="#modifier" prefHeight="47.0" prefWidth="120.0" stylesheets="@../CSS/ButtonHome1.css" text="Modifier" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            </children>
+        </Pane>
+        <TableView fx:id="tableclients" layoutX="192.0" layoutY="83.0" prefHeight="380.0" prefWidth="707.0" stylesheets="@../CSS/TablePat.css">
+            <columns>
+                <TableColumn fx:id="col_id" prefWidth="33.0" text="Id" />
+                <TableColumn fx:id="col_nom" prefWidth="66.0" text="Nom" />
+                <TableColumn fx:id="col_prenom" prefWidth="69.0" text="Prénom" />
+                <TableColumn fx:id="col_age" prefWidth="108.5999755859375" text="Date Naissance" />
+                <TableColumn fx:id="col_tel" minWidth="0.0" prefWidth="111.5999755859375" text="Téléphone" />
+                <TableColumn fx:id="col_adr" prefWidth="96.4000244140625" text="Adresse" />
+                <TableColumn fx:id="col_etat" minWidth="0.0" prefWidth="117.4000244140625" text="Etat civil" />
+            <TableColumn fx:id="col_cin" prefWidth="104.5999755859375" text="CIN/passport" />
+            </columns>
+        </TableView>
+      <Button fx:id="ret" layoutX="750.0" layoutY="13.0" mnemonicParsing="false" onAction="#interAdm">
+         <graphic>
+            <ImageView fitHeight="39.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../png/replay-arrow.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="homeBtn" layoutX="823.0" layoutY="14.0" mnemonicParsing="false" onAction="#homee">
+         <graphic>
+
+              <ImageView fx:id="homeImg" fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@../png/home-button.png" />
+                  </image>
+              </ImageView>
+         </graphic>
+      </Button>
+    </children>
+</AnchorPane>

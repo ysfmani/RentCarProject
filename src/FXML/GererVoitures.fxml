@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600" prefWidth="900" style="-fx-background-color: #DCDCDC;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ListerVoitures">
+    <children>
+        <Label layoutX="192.0" layoutY="19.0" prefHeight="58.0" prefWidth="372.0" text="Liste des Voitures" textFill="#404040">
+            <font>
+                <Font name="System Bold" size="40.0" />
+            </font>
+        </Label>
+        <Pane prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #C2C9D3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="716.0" AnchorPane.topAnchor="0.0">
+            <children>
+            <TextField fx:id="Model" layoutX="11.0" layoutY="121.0" promptText="Model" />
+                <TextField fx:id="Couleur" layoutX="10.0" layoutY="171.0" prefHeight="20.0" prefWidth="150.0" promptText="Couleur" />
+                <TextField fx:id="Marque" layoutX="10.0" layoutY="75.0" prefHeight="20.0" prefWidth="150.0" promptText="Marque" />
+                <TextField fx:id="Immatriculation" layoutX="10.0" layoutY="26.0" prefHeight="20.0" prefWidth="150.0" promptText="Immatriculation" />
+                <Button fx:id="ajouter" layoutX="25.0" layoutY="425.0" mnemonicParsing="false" onAction="#ajouterVoiture" prefHeight="39.0" prefWidth="120.0" style="-fx-background-color: #404040;" stylesheets="@../CSS/ButtonHome2.css" text="Ajouter" textFill="WHITE">
+                    <font>
+                        <Font name="Book Antiqua" size="19.0" />
+                    </font>
+                </Button>
+            <TextField fx:id="Prix" layoutX="11.0" layoutY="215.0" promptText="Prix/jours" />
+              <Button fx:id="supprimer" layoutX="25.0" layoutY="487.0" mnemonicParsing="false" onAction="#suprVoiture" prefHeight="39.0" prefWidth="120.0" style="-fx-background-color: #404040;" stylesheets="@../CSS/ButtonHome2.css" text="Supprimer" textFill="WHITE">
+                  <font>
+                      <Font name="Book Antiqua" size="19.0" />
+                  </font>
+              </Button>
+            <Button layoutX="25.0" layoutY="368.0" mnemonicParsing="false" onAction="#modifier" prefHeight="39.0" prefWidth="120.0" stylesheets="@../CSS/ButtonHome1.css" text="Modifier" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            </children>
+        </Pane>
+        <TableView fx:id="tablevoitures" layoutX="264.0" layoutY="102.0" prefHeight="380.0" prefWidth="528.0" stylesheets="@../CSS/TablePat.css">
+            <columns>
+                <TableColumn fx:id="col_Immatriculation" prefWidth="82.40007019042969" text="Immatriculation" />
+                <TableColumn fx:id="Col_Marque" minWidth="0.0" prefWidth="95.199951171875" text="Marque" />
+                <TableColumn fx:id="col_Couleur" minWidth="0.0" prefWidth="142.4000244140625" text="Model" />
+                <TableColumn fx:id="col_Model" minWidth="0.0" prefWidth="82.60000610351562" text="Couleur" />
+            <TableColumn fx:id="col_prix" prefWidth="121.5999755859375" text="Prix" />
+            </columns>
+        </TableView>
+      <Button fx:id="homeBtn" layoutX="819.0" layoutY="25.0" mnemonicParsing="false" onAction="#homee" prefHeight="46.0" prefWidth="48.0">
+         <graphic>
+      
+              <ImageView fx:id="homee" fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@../png/home-button.png" />
+                  </image>
+              </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="ret" layoutX="711.0" layoutY="24.0" mnemonicParsing="false" onAction="#interAdm">
+         <graphic>
+              <ImageView fitHeight="39.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@../png/replay-arrow.png" />
+                  </image>
+            </ImageView>
+         </graphic>
+      </Button>
+    </children>
+</AnchorPane>

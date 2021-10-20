@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #DCDCDC;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginController">
+   <children>
+      <Button fx:id="client" layoutX="36.0" layoutY="200.0" mnemonicParsing="false" onAction="#loginClient" prefHeight="86.0" prefWidth="209.0" style="-fx-background-color: #C2C9D3;" stylesheets="@../CSS/ButtonHome1.css" text="Client" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="41.0" />
+         </font>
+      </Button>
+      <Button fx:id="agent" layoutX="35.0" layoutY="89.0" mnemonicParsing="false" onAction="#loginAgent" prefHeight="87.0" prefWidth="210.0" style="-fx-background-color: #C2C9D3;" stylesheets="@../CSS/ButtonHome1.css" text="Agent location">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Button>
+      <Label layoutX="9.0" layoutY="362.0" prefHeight="24.0" prefWidth="504.0" text="Projet : &quot;Agence location Voitures&quot; realisé par : &quot;Mani youssef &amp; Moussa amine&quot; 2eme info B" />
+      <ImageView fitHeight="244.0" fitWidth="244.0" layoutX="315.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../png/car-front.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="294.0" layoutY="243.0" prefHeight="87.0" prefWidth="299.0" text="MANI&amp;MOUSSA LOCATION">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
