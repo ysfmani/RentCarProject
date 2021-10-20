@@ -31,7 +31,7 @@ Un Manager doit aussi s’authentifier pour visualiser toutes les voitures, ajou
 Administrateur :
 L’administrateur une fois authentifié dans le système a le privilège de gestion des comptes Clients (modifier ou supprimer), ainsi que des comptes Managers (ajouter, modifier ou supprimer).
 
-# ANG
+# ENG
 
 Management of a car rental agency
 
